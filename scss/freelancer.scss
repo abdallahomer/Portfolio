@@ -1,0 +1,35 @@
+// Import variables (overrides Bootstrap defaults)
+@import "base/variables";
+
+// Import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Import base styles
+@import "base/page";
+
+// Import components styles
+@import "components/divider";
+@import "components/divider";
+
+// Import layout styles
+@import "layout/navbar";
+@import "layout/masthead";
+@import "layout/portfolio";
+@import "layout/contact";
+@import "layout/footer";
+
+.btn-custom {
+  border: 2px solid #fff;
+  background-color: transparent !important;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  &:hover {
+    background-color: #fff !important;
+    color: $mainColor;
+  }
+}
+.portfolio-modal.modal.fade {
+  @media (max-width: 600px) {
+    padding: 0 !important;
+  }
+}
