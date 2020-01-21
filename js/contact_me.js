@@ -1,6 +1,7 @@
 // inputs
 const name = document.getElementById("name");
 const email = document.getElementById("email");
+const phone = document.getElementById("phone");
 const message = document.getElementById("message");
 // Form
 const form = document.getElementById("myForm");
@@ -29,6 +30,11 @@ function validateName() {
   if (checkIfEmpty(name)) return;
   // is if it has only letters
   if (!checkIfOnlyLetters(name)) return;
+  return true;
+}
+function validatePhone() {
+  if (checkIfEmpty(phone)) return;
+  if (!containOnlyNumbers(phone)) return;
   return true;
 }
 function validateEmail() {
@@ -62,7 +68,6 @@ function setInvalid(field, message) {
 }
 function setValid(field) {
   field.nextElementSibling.innerHTML = "";
-  //field.nextElementSibling.style.color = green;
 }
 function checkIfOnlyLetters(field) {
   if (/^[a-zA-Z ]+$/.test(field.value)) {
@@ -70,6 +75,15 @@ function checkIfOnlyLetters(field) {
     return true;
   } else {
     setInvalid(field, `${field.name} should contain only letters`);
+    return false;
+  }
+}
+function containOnlyNumbers(field) {
+  if (/^[0-9]*$/gm.test(field.value)) {
+    setValid(field);
+    return true;
+  } else {
+    setInvalid(field, `${field.name} should contain only numbers`);
     return false;
   }
 }

@@ -9857,6 +9857,16 @@ form .row:first-child .floating-label-form-group {
   background-color: #010101;
 }
 
+::-moz-selection {
+  background-color: #ff533d;
+  color: #fff;
+}
+
+::selection {
+  background-color: #ff533d;
+  color: #fff;
+}
+
 .btn-custom {
   border: 2px solid #fff;
   background-color: transparent !important;
@@ -9873,4 +9883,18 @@ form .row:first-child .floating-label-form-group {
   .portfolio-modal.modal.fade {
     padding: 0 !important;
   }
+}
+
+#myForm input,
+#myForm textarea {
+  border: transparent !important;
+  border-bottom: 1px solid #ccc !important;
+  border-radius: 0 !important;
+  resize: none;
+}
+
+#myForm input:focus,
+#myForm textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }

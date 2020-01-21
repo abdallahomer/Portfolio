@@ -17,7 +17,10 @@
 @import "layout/portfolio";
 @import "layout/contact";
 @import "layout/footer";
-
+::selection {
+  background-color: $mainColor;
+  color: #fff;
+}
 .btn-custom {
   border: 2px solid #fff;
   background-color: transparent !important;
@@ -31,5 +34,18 @@
 .portfolio-modal.modal.fade {
   @media (max-width: 600px) {
     padding: 0 !important;
+  }
+}
+#myForm {
+  input,
+  textarea {
+    border: transparent !important;
+    border-bottom: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    resize: none;
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
 }

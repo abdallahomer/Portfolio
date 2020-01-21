@@ -27,7 +27,7 @@
       rel="stylesheet"
       type="text/css"
     />
-
+    <link rel="icon" href="favicon.ico">
      <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
   </head>
@@ -106,7 +106,7 @@
 
     <!-- Portfolio Section -->
     <section class="page-section portfolio" id="portfolio">
-      <div class="container-fluid">
+      <div class="container">
         <!-- Portfolio Section Heading -->
         <h2 class="page-section-heading text-center text-secondary mb-0">
           Portfolio
@@ -497,6 +497,18 @@
                 id="email"
                 aria-describedby="emailHelpId"
                 placeholder="E-mail"
+              />
+              <div class="text-helper text-danger text-center"></div>
+            </div>
+            <div class="form-group">
+              <input
+                onfocusout="validatePhone();"
+                type="phone"
+                class="form-control"
+                name="phone"
+                id="phone"
+                aria-describedby="PhoneHelpId"
+                placeholder="Mobile"
               />
               <div class="text-helper text-danger text-center"></div>
             </div>
