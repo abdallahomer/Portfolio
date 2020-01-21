@@ -393,7 +393,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+            <!-- <form name="sentMessage" id="contactForm" novalidate="novalidate">
               <div class="control-group">
                 <div
                   class="form-group floating-label-form-group controls mb-0 pb-2"
@@ -469,7 +469,54 @@
                   Send
                 </button>
               </div>
-            </form>
+            </form> -->
+            <form
+            class="pb-5 wow bounceIn"
+            style="animation-delay:.5s"
+            id="myForm"
+            novalidate
+          >
+            <div class="form-group">
+              <input
+                onfocusout="validateName();"
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Name"
+                aria-describedby="helpId"
+              />
+              <div class="text-helper text-danger text-center"></div>
+            </div>
+            <div class="form-group">
+              <input
+                onfocusout="validateEmail();"
+                type="email"
+                class="form-control"
+                name="email"
+                id="email"
+                aria-describedby="emailHelpId"
+                placeholder="E-mail"
+              />
+              <div class="text-helper text-danger text-center"></div>
+            </div>
+            <div class="form-group">
+              <textarea
+                onfocusout="validateMessage();"
+                class="form-control"
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Your Message"
+                type="text"
+              ></textarea>
+              <div class="text-helper text-danger text-center"></div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">
+              Send
+            </button>
+            <div class="clearfix"></div>
+          </form>
           </div>
         </div>
       </div>
@@ -483,7 +530,7 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h4 class="mb-4">Location</h4>
             <p class="lead mb-0">
-              10th Of Ramadan </br> Al-Sharqia - Egypt
+              10th Of Ramadan <br> Al-Sharqia - Egypt
             </p>
           </div>
 
